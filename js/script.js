@@ -6,7 +6,7 @@ var context = canvas.getContext('2d');
 context.fillStyle='black'
 context.fillRect(0,0,canvas.width,canvas.height);
 
-let player = new Player(canvas.width/2-35,canvas.height-20,70,20,'red')
+let player = new Player(canvas.width/2-35,canvas.height-20,80,20,'red')
 let bricks = [];
 
 let ball = new Ball(player.x-50,player.y-100,10,'white')
