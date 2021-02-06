@@ -1,6 +1,6 @@
 
-let click = new Audio("./js/myclick.mp3")
-let jump = new Audio('./js/jump.mp3')
+let click = new Audio("./assets/myclick.mp3")
+let jump = new Audio('./assets/jump.mp3')
 
 class Ball{
     constructor(x,y,r,color){

@@ -14,7 +14,9 @@ let gameInterval;
 
 let score = 0;
 let level = 1;
-let bricksCount = 3;
+let bricksCount = 8;
+let bricksBroken=0;
+let hasPowerUp=false;
 
 
 function gameLoop(){
@@ -40,6 +42,7 @@ function gameLoop(){
         }
         if(brick.toDelete){
             bricks.splice(idx,1)
+            bricksBroken++
             score+=100
         }
       
@@ -51,6 +54,7 @@ function gameLoop(){
         level++;
         bricksCount+=3;
         createBricks();
+        powerUpBtn.style.display='block'
         return;
     }
 
@@ -113,8 +117,10 @@ function createBricks(){
 
 
 
-let leftArrowBtn = document.querySelector(".arrowLeftBtn")
+let leftArrowBtn = document.querySelector(".arrowLeftBtn");
 let rightArrowBtn = document.querySelector(".arrowRightBtn");
+let powerUpBtn = document.querySelector(".powerUpBtn");
+    //powerUpBtn.style.display='none'
 
 
 leftArrowBtn.onclick=()=>{
@@ -123,4 +129,15 @@ leftArrowBtn.onclick=()=>{
 
 rightArrowBtn.onclick=()=>{
     player.move(2)
+}
+
+
+powerUpBtn.onclick=()=>{
+    powerUpBtn.style.display='none'
+    
+    bricks.forEach(b=>{
+        if(Math.random() > .3){
+            b.toDelete = true;
+        }
+    })
 }

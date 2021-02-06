@@ -21,6 +21,13 @@
             justify-content: space-evenly;
         }
 
+        .powerUpBtn{
+            border-radius:50%;
+            background:rgb(255,0,0,0.8);
+            padding:.5em;
+            border:2px solid black;
+        }
+
         body{
             text-align:center;
         }
@@ -31,10 +38,11 @@
 </head>
 <body>
     <h1>Break -a- Brick Game</h1>
-    <canvas width='400' height='500' id='gamecanvas'></canvas>
+    <canvas width='400' height='400' id='gamecanvas'></canvas>
 
     <div class="controllerRow">
         <h1><i class="arrowLeftBtn fa fa-arrow-left"></i></h1>
+        <h1 class='powerUpBtn'><i class="fa fa-radiation"></i><br/>powerup</h1>
         <h1><i class="arrowRightBtn fa fa-arrow-right"></i></h1>
     </div>
 
