@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(to right,lightgray,gray)
+        }
+
+        .controllerRow{
+            display:flex;
+            align-items:center;
+            justify-content: space-evenly;
+        }
+
+        body{
+            text-align:center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="search icon" href="#">
+    <title>Break a Brick</title>
+</head>
+<body>
+    <h1>Break -a- Brick Game</h1>
+    <canvas width='400' height='500' id='gamecanvas'></canvas>
+
+    <div class="controllerRow">
+        <h1><i class="arrowLeftBtn fa fa-arrow-left"></i></h1>
+        <h1><i class="arrowRightBtn fa fa-arrow-right"></i></h1>
+    </div>
+
+    <script src="js/brick.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
